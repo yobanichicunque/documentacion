@@ -1,0 +1,19 @@
+> - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+* Servidor web local de node
+> - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+* INSTALACION
+Ejecuar el siguiente comando en la termina de git bash.
+Y espera a que se instale. Recuerda que tienes que estar
+conectado a internet.
+
+npm install -g http-server
+> - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+* CORRER EL SERVIDOR WEB
+En la terminal indicar la ruta o directorio de
+tu proyecto y correr el servidor con http-server.
+
+cd /d/Mis-archivos/Maestria-Web
+
+http-server
+> - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
