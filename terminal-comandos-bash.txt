@@ -22,6 +22,12 @@ pwd --help
 pwd  -h
 
 > - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+git --version
+node --version
+python --version
+
+Para concer la version de un programa
+> - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 Ver el historial de comando de busqueda
 
 Flecha Arriba
@@ -131,10 +137,19 @@ archivo. Es el comando recomendado para eliminar cualquier direc
 torio).(comando recomendado para eliminar carpetas con contenido)
 
 > - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-mv hola.txt "Mis archivo"
+mv hola.txt Fotos/
 para mover el archivo a otra carpeta.
 Nombre del archivo que queremos mover y luego el nombre
 del directorio.
+
+mv hola.txt Fotos/nota.txt
+para mover el archivo a otra carpeta y con un nuevo nombre
+
+mv hola.txt ../
+para mover el archivo un nivel mas arriba
+
+mv hola.txt ../..
+para mover el archivo dos niveles mas arriba
 
 mv hola.txt prueba.txt
 Para renombrar un el nombre de un archivo.

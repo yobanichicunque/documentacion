@@ -323,16 +323,168 @@ TEMPLATES = [
     },
 ]
 
-Ver el video 10
+> - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+PARTE N°4 HERENCIA DE TEMPLATES E INCLUDES
+> - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+1 Crear la carpeta templates en la raiz del proyecto,
+es decir, en sistema/
+
+2 Crear la carpeta base en sistema/templates/
+
+3 Crear el archivo layout.html en sistema/templates/base/
+
+4 Crear los siguinetes bloques
+
+<head>
+    <title>{% block title %}Document{% endblock %}</title>
+</head>
+
+<body>
+    {% block header %}
+    <h2>Este es es el header base</h2>
+    {% endblock %}
+
+    {% block content %}
+    <h2>Este es el contenido base</h2>
+    {% endblock %}
+
+    {% block footer %}
+    <h2>Este es el footer base</h2>
+    {% endblock  %}
+ </body>
+
+5 Crear la carpeta mascota en sistema/templates/
+
+6 Crear el archivo index.html en sistema/templates/mascota
+
+7 Heredamos los elementos de layout.hml en sistema/templates/mascota/index.html, para ello ponemos el 
+siguiente codigo:
+
+{% extends 'base/layout.html' %}
+
+8 Nuestra vista index en sisetma/mascota/views.py
+le indicamos a la vista que queremos renderizar el
+archivo index.html ubicado en sistema/templates/mascota/
+
+def index(request):
+    return render(request, 'mascota/index.html')
+
+8 Sobrescribimos el contenido del layout.html en mascota/index.html
+
+{% block title %}App Mascota{% endblock  %}
+
+{% block header %}
+<h2>Header de la App Mascota</h2>
+{% endblock  %}
+
+{% block content %}
+<h2>Contenido de la App Mascota</h2>
+{% endblock %}
+
+{% block footer %}
+<h2>Footer de la App Mascota</h2>
+{% endblock  %}
+
+9 Crear un archivo header.html en sistema/mascota/
+con el sisguiente contenido:
+
+<header>
+    <h2>Header de la App Mascota</h2>
+</header>
+
+...en icluirlo en el index.html de sistema/mascota/
+
+{% block header %}
+{% include 'mascota/header.html' %}
+{% endblock  %}
+
+10 Nota importante: Crear dos bloque extra para el head
+y para los archivo javascript de esta manera no sobrecarcamos
+el loyout.html con archivos css y js que no necesita.
 
 
 
+Ejmplo
+
+<head>
+    {% block extrahead %}
+    {% endblock  %}
+
+</head>
+<body>
+ 
+
+    {% block extrajs %}
+    {% endblock  %}
+
+</body>
+
+</html>
 
 
+> - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+PARTE N°5 ETIQUETA {% load static %}
+> - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+1 Poner la etiqueta {% load static %} en la primera linea
+de codigo del archivo layout.html. Esta etiqueta 
+permite cargar los archivos css y js.
+Ejmeplo:
 
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
 
+> - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+PARTE N°6 CONFIGURCION DE ARCHVIOS ESTATICOS
+> - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+1 Crear la carpeta static en la raiz del proyecto, y
+dentro de la carpeta static/ crear dos caspetas: la
+carpeta css y la carpeta js
+
+2 agregar el archvio bootstrap.min.css en la carpeta css
+y agregar el archivo bootstrap.min.js en la carpeta js
+
+3 Le indicamos  Djanco donde debe buscar los 
+archivos estaticos, para ello ponemos el siguinete codigo
+en sistema/settings..py
+
+STATIC_URL = '/static/'
+STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
+MEDIA_ROOT = os.path.join(BASE_DIR, '')
+MEDIA_URL = '/imagenes/'
+
+4 en sistema/base/layout.html le indicamos donde estan
+ubicados nuestros archivos staticos de bootstrap.min.css y
+bootstrap.min.js. Adicional a eso agregar la cdn de jquery.
+Recuerda que  tambien puedes poner rutas de otros 
+archivos ccs o js que tu hayas creado.
+
+<head>
+
+    <!-- Bootstrap CSS v5.2.3 -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+</head>
+
+<body>
+
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+</body>
+
+ver video 12
 
 
 
