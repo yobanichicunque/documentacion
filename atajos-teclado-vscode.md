@@ -1,6 +1,6 @@
 # Atajos del teclado en Visual Studio Code
 
-### Temario
+### Temas
 
 1. [Configuraciones](#configuraciones)
 1. [Guardar todos los cambios de un archivo](#guardar-todos-los-cambios-de-un-archivo)
@@ -32,7 +32,7 @@ Control + ,
 
 Control + s
 
-## Controlar el zoom:
+## Controlar el zoom
 
 Control + +
 
@@ -108,13 +108,11 @@ Tab
 
 Shift + Tab
 
-[☝️](#temario)
+[🔼 Regresar](#temas)
 
 ---
 
-**`Fin del curso...`**
 
-**`¡Felicitaciones por llegar hata aquí!`**
 
----
+
 

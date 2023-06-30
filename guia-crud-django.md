@@ -627,22 +627,3 @@ class MascotaForm(forms.ModelForm):
         }
 
 voy en el minuto 7:30 de del video 12 
-        
-
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
