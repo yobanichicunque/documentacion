@@ -1,6 +1,5 @@
-> - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-* Comados terminal Git Bash
-> - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# Terminal de comandos
+
 
 pwd (significa: imprimir ruta del directorio actual)
 Devuelve la ruta de donde se esta ejcutando ese
