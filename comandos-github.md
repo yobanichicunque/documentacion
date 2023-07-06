@@ -3,16 +3,10 @@
 ### Temas
 
 1. [Pasos previos](#pasos-previos)
-1. [](#)
-1. [](#)
-1. [](#)
-1. [](#)
-
----
-
->**Nota**
->
->Recuerda agregar una credencial web de GitHub en tu PC, o bien quitar las >credenciales de otro usuario y agregar tus credenciales, de lo contraio no >podras subir tu proyecto a GitHub.
+1. [Subir repositiro](#subir-repositorio)
+1. [Agreagar y subir cambios](#agregar-y-subir-cambios)
+1. [Clonar un repostorio](#clonar-repositorios)
+1. [Correr proyecto clonado](#correr-proyecto-clonado)
 
 ---
 
@@ -20,18 +14,18 @@
 
 Detener el servidor.
 
-```
+```py
 Control + c
 ```
 
 Especificar dependencias mediante un archivo requirements.txt.
 
-```
+```py
 pip freeze
 pip freeze > requirements.txt
 ```
 
-Desactivo el entorno virtual.
+Desactivar el entorno virtual.
 
 ```
 deactivate
@@ -51,9 +45,9 @@ Crear repositorio en GitHub para subir el proyecto.
 
 ## Subir repositorio
 
-Para repositorio nuevos
+Para repositorio nuevos.
 
-```
+```py
 git init
 git add .
 git commit -m "Primer commit"
@@ -64,7 +58,7 @@ git push -u origin main
 
 Para repositorio existentes
 
-```
+```py
 git branch -M main
 git remote add origin https://github.com/usuario/repositorio.git
 git push -u origin main
@@ -85,6 +79,7 @@ git push
 ```
 git pull
 ```
+
 ---
 
 ## Clonar repositorios
@@ -130,6 +125,6 @@ py manage.py runserver
 
 **Fin del curso.**
 
-**¡Felicitaciones por llegar hata aquí!**
+**¡Felicitaciones por llegar hasta aquí!**
 
 ---
