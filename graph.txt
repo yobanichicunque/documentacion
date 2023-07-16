@@ -1,9 +1,0 @@
-* d34f45f Se agrego contenido en los archivos md
-* cd820a3 Mas cambios
-* 75ab336 Se agrego imagen banner de mi canal
-* 4c9cf25 Se crearon archivos md
-* cb9299f Se hicieron cambios en guia-crud
-* a6281f7 Se agregaron mas lineas
-* dde0041 Se agrego mas contenido en documentaciontxt
-* ffb6ddf Se actulizo el README.md
-* 5db4790 first commit

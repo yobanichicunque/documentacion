@@ -311,7 +311,7 @@ git log
 git log one line
 
 # guarda el log en la ruta y archivo que especifiquemos
-git log > commits.txt
+git log > commits.log
 
 # muestra el historioal con el formato que indicamos
 git log --pretty=format:"%h - %an, %ar : %s"
@@ -332,7 +332,7 @@ git log --after="2019-07-07 00:00:00" --before="2019-07-08 00:00:00"
 git log --oneline --graph --all
 
 # guarda la grafica del historioal de cambios en un archivo de texto plano
-git log --oneline --graph --all > graph.txt
+git log --oneline --graph --all > graph.log
 
 # muestra todo el registro de acciones del log
 # incluyendo intersecciones, camibios, eliminaciones  y fusiones, etc.
