@@ -97,8 +97,12 @@ Importar la base de datos en un gestor de base de datos.
 Crear el entorno virtual y activarlo.
 
 ```
-python -m venv env
-env\scripts\activate
+python -m venv env #Crear el entorno virtual ya sea co PowerShell o Gitbash
+env\scripts\activate #activa el entorno virtual con la terminal PowerShell
+
+
+source env/scripts/activate #activa el entorno virtual con la terminal Gitbash
+
 ```
 
 Instalar las dependencias del proyecto.
